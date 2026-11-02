@@ -32,9 +32,7 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-text">Brazilia</span>
-                <span class="logo-sub">Coffee</span>
-                <span class="logo-ar">برازيليا</span>
+                <img src="assets/logo.jpg" alt="بن برازيليا" class="brand-logo-img">
             </a>
 
             <nav class="navbar" id="navbar">
@@ -121,8 +119,8 @@
             <div class="stat-item fade-in-scroll">
                 <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <div class="stat-details">
-                    <h3 class="stat-number" data-target="4">0</h3>
-                    <p class="stat-text">فروع تغطي احتياجاتكم</p>
+                    <h3 class="stat-number" data-target="2">0</h3>
+                    <p class="stat-text">فروع لخدمتكم بعين شمس</p>
                 </div>
             </div>
         </div>
@@ -133,9 +131,8 @@
         <div class="container grid-2">
             <div class="about-image-container fade-in-scroll">
                 <div class="about-image-wrapper">
-                    <!-- We'll style a premium responsive container using background gradients or absolute positioning -->
                     <div class="glass-photo-card card-large">
-                        <img src="assets/products/beans.png" alt="حبوب قهوة برازيليا الفاخرة"
+                        <img src="assets/about_package2.jpg" alt="عبوة بن برازيليا محوج فاخر مع حبوب البن المحمصة"
                             class="img-fluid rounded-img">
                     </div>
                     <div class="floating-badge-experience">
@@ -258,74 +255,49 @@
         <!-- Product Filters -->
         <div class="container text-center">
             <div class="product-filters fade-in-scroll">
-                <button class="filter-btn active" data-filter="all">المنيو</button>
-                <button class="filter-btn" data-filter="beans">سادة</button>
-                <button class="filter-btn" data-filter="drinks">محوج</button>
+                <button class="filter-btn active" data-filter="all">جميع الأصناف</button>
+                <button class="filter-btn" data-filter="sada">بن سادة</button>
+                <button class="filter-btn" data-filter="mohawag">بن محوج</button>
+                <button class="filter-btn" data-filter="menu-board">لوحة المنيو الكاملة</button>
             </div>
         </div>
 
         <!-- Products Grid -->
         <div class="container grid-3 margin-top-lg" id="productsGrid">
 
-            <!-- Product 1: Premium Beans -->
-            <div class="product-card fade-in-scroll" data-category="beans">
+            <!-- Menu Board Card (Shown exclusively when clicking 'لوحة المنيو بالكامل') -->
+            <div class="product-card menu-board-card fade-in-scroll hide" data-category="menu-board">
+                <div class="menu-board-inner">
+                    <div class="menu-board-img-wrap" id="openMenuModal">
+                        <img src="assets/menu.jpg" alt="منيو وقائمة أسعار بن برازيليا" class="menu-board-preview-img">
+                        <div class="menu-overlay-hint">
+                            <i class="fas fa-search-plus"></i>
+                            <span>اضغط لتكبير المنيو وقراءة كافة الأسعار</span>
+                        </div>
+                    </div>
+                    <div class="menu-board-info">
+                        <span class="product-tag">المنيو والأسعار الرسمية</span>
+                        <h3 class="product-title">منيو بن برازيليا المتكامل لجميع الأصناف والأوزان</h3>
+                        <p class="product-description">
+                            تصفح قائمتنا الكاملة بأسعار الكيلو والربع والثمن لجميع الخلطات: بن برازيليا ملكي، بن برزيلي، بن شرقي (فاتح/وسط/غامق)، بن العميد، استشيل، حبشي، كولومبي، يمني، إسبريسو، وفرنساوي، مع حبهان وجوز الطيب الطازج.
+                        </p>
+                        <div class="menu-board-actions">
+                            <button class="btn btn-primary" id="btnViewMenuModal">
+                                <i class="fas fa-eye"></i> تكبير المنيو وقراءة الأسعار
+                            </button>
+                            <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-whatsapp"></i> طلب مباشر عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 1: بن برازيليا ملكي سادة -->
+            <div class="product-card fade-in-scroll" data-category="sada">
                 <div class="product-image-box">
-                    <img src="assets/products/beans.png" alt="بن برازيليا سانتوس المختص" class="product-img">
+                    <img src="assets/package-sada.jpg" alt="بن برازيليا ملكي سادة" class="product-img">
                     <span class="product-tag">الأكثر مبيعاً</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>(4.9)</span>
-                    </div>
-                    <h3 class="product-title">بن برازيليا سانتوس (250 جرام)</h3>
-                    <p class="product-description">بن برازيلي ذو سلالة نقية، يتميز بحلاوة طبيعية مع إيحاءات الشوكولاتة
-                        والمكسرات، وتحميص متوسط مثالي للإسبريسو ومشروبات الحليب.</p>
-                    <div class="product-meta">
-                        <span class="product-price">280 EGP</span>
-                        <button class="btn btn-card-order" data-product="بن برازيليا سانتوس (250 جرام)">
-                            <i class="fab fa-whatsapp"></i> اطلب واتساب
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2: Specialty V60 Brewing -->
-            <div class="product-card fade-in-scroll" data-category="drinks">
-                <div class="product-image-box">
-                    <img src="assets/products/specialty.png" alt="قهوة مقطرة V60 حارة" class="product-img">
-                </div>
-                <div class="product-info">
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(4.8)</span>
-                    </div>
-                    <h3 class="product-title">قهوة مقطرة V60 (سنجل أوريجن)</h3>
-                    <p class="product-description">قهوة محضرة بفلتر V60 بعناية فائقة لتبرز النكهات الفواكهية والحمضية
-                        المتوازنة بحبوب بن متخصصة مختارة بعناية.</p>
-                    <div class="product-meta">
-                        <span class="product-price">95 EGP</span>
-                        <button class="btn btn-card-order" data-product="قهوة مقطرة V60 (سنجل أوريجن)">
-                            <i class="fab fa-whatsapp"></i> اطلب واتساب
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3: Premium Coffee Blend -->
-            <div class="product-card fade-in-scroll" data-category="beans">
-                <div class="product-image-box">
-                    <!-- Reusing the beans.png asset with styling/transforms or just showing the quality -->
-                    <img src="assets/products/beans.png" alt="خلطة برازيليا إسبريسو سيجنتشر" class="product-img">
-                    <span class="product-tag">حصري</span>
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -336,23 +308,48 @@
                         <i class="fas fa-star"></i>
                         <span>(5.0)</span>
                     </div>
-                    <h3 class="product-title">خلطة برازيليا إسبريسو سيجنتشر (500 جرام)</h3>
-                    <p class="product-description">خلطة حبوب بن برازيلية منتقاة ومحمصة خصيصاً لاستخلاص كريمي كثيف وقوام
-                        متناسق، مثالية للمشروبات الساخنة والباردة.</p>
+                    <h3 class="product-title">بن برازيليا ملكي (سادة)</h3>
+                    <p class="product-description">أجود خلطة بن برازيلي صافي سادة بتوليفة ملكية خاصة، تحميص احترافي ونكهة شوكولاتية غنية وقوام متوازن.</p>
                     <div class="product-meta">
-                        <span class="product-price">520 EGP</span>
-                        <button class="btn btn-card-order" data-product="خلطة برازيليا إسبريسو سيجنتشر (500 جرام)">
+                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن برازيليا ملكي (سادة) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 4: Iced Coffee (Spanish Latte) -->
-            <div class="product-card fade-in-scroll" data-category="drinks">
+            <!-- Product 2: بن برازيليا ملكي محوج -->
+            <div class="product-card fade-in-scroll" data-category="mohawag">
                 <div class="product-image-box">
-                    <img src="assets/products/specialty.png" alt="سبانيش لاتيه بارد" class="product-img"
-                        style="filter: hue-rotate(20deg);">
+                    <img src="assets/package-mohawag.jpg" alt="بن برازيليا ملكي محوج" class="product-img">
+                    <span class="product-tag">المذاق الملكي</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <h3 class="product-title">بن برازيليا ملكي (محوج)</h3>
+                    <p class="product-description">توليفة برازيليا الملكية الفاخرة مع حبهان أخضر طازج ومستكة، لضبط المزاج وتجربة قهوة شرقية أصيلة لا تُقاوم.</p>
+                    <div class="product-meta">
+                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن برازيليا ملكي (محوج) - ربع كيلو">
+                            <i class="fab fa-whatsapp"></i> اطلب واتساب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: بن برزيلي سادة -->
+            <div class="product-card fade-in-scroll" data-category="sada">
+                <div class="product-image-box">
+                    <img src="assets/package-sada.jpg" alt="بن برزيلي فاخر سادة" class="product-img">
+                    <span class="product-tag">كلاسيك</span>
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -363,24 +360,22 @@
                         <i class="fas fa-star"></i>
                         <span>(4.9)</span>
                     </div>
-                    <h3 class="product-title">سبانيش لاتيه بارد (Iced Spanish)</h3>
-                    <p class="product-description">مزيج رائع ومتوازن من الحليب المكثف المحلى، الحليب الطازج، وخطين من
-                        الإسبريسو الفاخر المستخلص من حبوب برازيليا كوفي.</p>
+                    <h3 class="product-title">بن برزيلي أصلي (سادة)</h3>
+                    <p class="product-description">حبوب بن برازيلي صافية 100% بنكهات الجوز والكراميل الطبيعية، مثالية للركوة والإسبريسو ومحبي القهوة الصافية.</p>
                     <div class="product-meta">
-                        <span class="product-price">110 EGP</span>
-                        <button class="btn btn-card-order" data-product="سبانيش لاتيه بارد (Iced Spanish)">
+                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن برزيلي أصلي (سادة) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 5: Gooseneck Drip Kettle -->
-            <div class="product-card fade-in-scroll" data-category="tools">
+            <!-- Product 4: بن برزيلي محوج -->
+            <div class="product-card fade-in-scroll" data-category="mohawag">
                 <div class="product-image-box">
-                    <img src="assets/products/beans.png" alt="إبريق ترشيح القهوة الفاخر" class="product-img"
-                        style="filter: brightness(0.6) sepia(0.3) saturate(1.2);">
-                    <span class="product-tag">جديد</span>
+                    <img src="assets/package-mohawag.jpg" alt="بن برزيلي محوج" class="product-img">
+                    <span class="product-tag">مميز</span>
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -389,25 +384,24 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
-                        <span>(4.7)</span>
+                        <span>(4.8)</span>
                     </div>
-                    <h3 class="product-title">إبريق ترشيح القهوة الفاخر مع مقياس حرارة</h3>
-                    <p class="product-description">إبريق ذو عنق منحني للتحكم المثالي في انسياب وتدفق المياه أثناء ترشيح
-                        القهوة، مصنوع من الستانلس ستيل المقاوم للصدأ.</p>
+                    <h3 class="product-title">بن برزيلي (محوج مخصوص)</h3>
+                    <p class="product-description">بن برازيلي نخب أول مطعّم بنسبة موزونة من الحبهان العطري الممتاز للحصول على وش متماسك ورائحة تفوح في المكان.</p>
                     <div class="product-meta">
-                        <span class="product-price">850 EGP</span>
-                        <button class="btn btn-card-order" data-product="إبريق ترشيح القهوة الفاخر مع مقياس حرارة">
+                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن برزيلي (محوج مخصوص) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 6: Manual Hand Coffee Grinder -->
-            <div class="product-card fade-in-scroll" data-category="tools">
+            <!-- Product 5: بن شرقي سادة -->
+            <div class="product-card fade-in-scroll" data-category="sada">
                 <div class="product-image-box">
-                    <img src="assets/products/beans.png" alt="طاحونة قهوة يدوية سيراميك" class="product-img"
-                        style="filter: contrast(1.1) brightness(0.8);">
+                    <img src="assets/package-sada.jpg" alt="بن شرقي سادة" class="product-img">
+                    <span class="product-tag">درجات تحميص</span>
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -416,14 +410,91 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <span>(4.8)</span>
+                        <span>(4.9)</span>
                     </div>
-                    <h3 class="product-title">طاحونة قهوة يدوية - تروس سيراميك</h3>
-                    <p class="product-description">طاحونة يدوية محمولة مزودة بتروس سيراميك مخروطية لطحن حبوب القهوة
-                        بدرجات مختلفة من الخشن إلى الناعم للـ V60 والإسبريسو.</p>
+                    <h3 class="product-title">بن شرقي سادة (فاتح / وسط / غامق)</h3>
+                    <p class="product-description">توليفة شرقية عريقة متاحة حسب رغبتك بالتحميص الفاتح أو الوسط أو الغامق بطعم قوي وغني بالإيحاءات التراثية.</p>
                     <div class="product-meta">
-                        <span class="product-price">490 EGP</span>
-                        <button class="btn btn-card-order" data-product="طاحونة قهوة يدوية - تروس سيراميك">
+                        <span class="product-price">140 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن شرقي سادة (فاتح/وسط/غامق) - ربع كيلو">
+                            <i class="fab fa-whatsapp"></i> اطلب واتساب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6: بن شرقي محوج -->
+            <div class="product-card fade-in-scroll" data-category="mohawag">
+                <div class="product-image-box">
+                    <img src="assets/package-mohawag.jpg" alt="بن شرقي محوج" class="product-img">
+                    <span class="product-tag">طلب يومي</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                    <h3 class="product-title">بن شرقي محوج (فاتح / وسط / غامق)</h3>
+                    <p class="product-description">الخلطة الشرقية المحبوبة مع تحويجة خاصة من الحبهان الفاخر، تناسب عشاق الفنجان اليومي المضبوط بدرجة التحميص المختارة.</p>
+                    <div class="product-meta">
+                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن شرقي محوج (فاتح/وسط/غامق) - ربع كيلو">
+                            <i class="fab fa-whatsapp"></i> اطلب واتساب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7: بن كولومبي سادة -->
+            <div class="product-card fade-in-scroll" data-category="sada">
+                <div class="product-image-box">
+                    <img src="assets/package-sada.jpg" alt="بن كولومبي مختص سادة" class="product-img">
+                    <span class="product-tag">أرابيكا فاخرة</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <h3 class="product-title">بن كولومبي سوبريمو (سادة)</h3>
+                    <p class="product-description">محصول كولومبي نقي بحموضة فاكهية رقيقة مع نوتات العسل والحمضيات الخفيفة، لعشاق القهوة المختصة الراقية.</p>
+                    <div class="product-meta">
+                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن كولومبي سوبريمو (سادة) - ربع كيلو">
+                            <i class="fab fa-whatsapp"></i> اطلب واتساب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8: بن يمني محوج -->
+            <div class="product-card fade-in-scroll" data-category="mohawag">
+                <div class="product-image-box">
+                    <img src="assets/package-mohawag.jpg" alt="بن يمني أصيل محوج" class="product-img">
+                    <span class="product-tag">نادر وفاخر</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <h3 class="product-title">بن يمني إسماعيلي أصيل (محوج)</h3>
+                    <p class="product-description">الذهب الأسود من جبال اليمن الشاهقة، قوام ثقيل وطعم بري معقد مع حبهان وجوز الطيب ليمنحك فنجاناً لا مثيل له.</p>
+                    <div class="product-meta">
+                        <span class="product-price">250 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <button class="btn btn-card-order" data-product="بن يمني إسماعيلي (محوج) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
                     </div>
@@ -443,132 +514,67 @@
                 الحالية.</p>
         </div>
 
-        <div class="container grid-4 margin-top-lg">
+        <div class="container grid-2 margin-top-lg">
 
-            <!-- Branch 1 Card -->
+            <!-- Branch 1: فرع ميدان النعام -->
             <div class="branch-card fade-in-scroll">
-                <div class="branch-image-placeholder">
-                    <!-- Elegant visual map layout styled via CSS, featuring dynamic coordinates -->
-                    <i class="fas fa-map-marked-alt branch-map-icon"></i>
+                <div class="branch-image-box">
+                    <img src="assets/branch-naam.jpg" alt="فرع بن برازيليا ميدان النعام" class="branch-img">
                     <div class="branch-tag">الفرع الرئيسي</div>
                 </div>
                 <div class="branch-details">
-                    <h3 class="branch-name">فرع القاهرة الجديدة (التجمع الخامس)</h3>
+                    <h3 class="branch-name">فرع ميدان النعام (عين شمس)</h3>
                     <ul class="branch-info-list">
                         <li>
                             <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="info-text">شارع التسعين الشمالي، بجوار مول الداون تاون، مبنى رقم 12</span>
+                            <span class="info-text">٣٩ شارع عين شمس، ميدان النعام، بجوار بازوكا والتوحيد والنور</span>
                         </li>
                         <li>
                             <span class="info-icon"><i class="fas fa-clock"></i></span>
-                            <span class="info-text">يومياً من الساعة 8:00 صباحاً وحتى 12:00 منتصف الليل</span>
+                            <span class="info-text">يومياً من الساعة 8:00 صباحاً وحتى 1:00 بعد منتصف الليل</span>
                         </li>
                         <li>
-                            <span class="info-icon"><i class="fas fa-phone-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 2 27654321</span>
+                            <span class="info-icon"><i class="fab fa-whatsapp"></i></span>
+                            <span class="info-text" dir="ltr">01147070744</span>
                         </li>
                         <li>
-                            <span class="info-icon"><i class="fas fa-mobile-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 10 1234 5678</span>
+                            <span class="info-icon"><i class="fas fa-coffee"></i></span>
+                            <span class="info-text">طحن طازج لكافة الخلطات وإمكانية إعداد قهوتك فورياً</span>
                         </li>
                     </ul>
-                    <a href="https://maps.google.com" target="_blank" class="btn btn-branch-map">
+                    <a href="https://maps.google.com/maps?q=30.1227970123291%2C31.318387985229492&z=17&hl=en" target="_blank" class="btn btn-branch-map">
                         <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
                     </a>
                 </div>
             </div>
 
-            <!-- Branch 2 Card -->
+            <!-- Branch 2: فرع متحف المطرية -->
             <div class="branch-card fade-in-scroll">
-                <div class="branch-image-placeholder secondary-place">
-                    <i class="fas fa-map-marked-alt branch-map-icon"></i>
-                    <div class="branch-tag">فرع الإسكندرية</div>
+                <div class="branch-image-box">
+                    <img src="assets/branch-mataria.jpg" alt="فرع بن برازيليا متحف المطرية" class="branch-img">
+                    <div class="branch-tag">فرع متحف المطرية</div>
                 </div>
                 <div class="branch-details">
-                    <h3 class="branch-name">فرع الإسكندرية (سموحة)</h3>
+                    <h3 class="branch-name">فرع متحف المطرية (عين شمس)</h3>
                     <ul class="branch-info-list">
                         <li>
                             <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="info-text">طريق ألبرت الأول، أبراج سموحة ستارز، أمام نادي سموحة</span>
+                            <span class="info-text">عين شمس، متحف المطرية، بجوار قهوة عماد وفرع فودافون</span>
                         </li>
                         <li>
                             <span class="info-icon"><i class="fas fa-clock"></i></span>
-                            <span class="info-text">يومياً من الساعة 9:00 صباحاً وحتى 11:30 مساءً</span>
+                            <span class="info-text">يومياً من الساعة 8:00 صباحاً وحتى 1:00 بعد منتصف الليل</span>
                         </li>
                         <li>
-                            <span class="info-icon"><i class="fas fa-phone-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 3 4298765</span>
+                            <span class="info-icon"><i class="fab fa-whatsapp"></i></span>
+                            <span class="info-text" dir="ltr">01147070744</span>
                         </li>
                         <li>
-                            <span class="info-icon"><i class="fas fa-mobile-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 12 9876 5432</span>
+                            <span class="info-icon"><i class="fas fa-chair"></i></span>
+                            <span class="info-text">جلسات خارجية هادئة وتشكيلة واسعة من البن المحوج والسادة</span>
                         </li>
                     </ul>
-                    <a href="https://maps.google.com" target="_blank" class="btn btn-branch-map">
-                        <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
-                    </a>
-                </div>
-            </div>
-
-            <!-- Branch 3 Card -->
-            <div class="branch-card fade-in-scroll">
-                <div class="branch-image-placeholder secondary-place">
-                    <i class="fas fa-map-marked-alt branch-map-icon"></i>
-                    <div class="branch-tag">فرع الإسكندرية</div>
-                </div>
-                <div class="branch-details">
-                    <h3 class="branch-name">فرع الإسكندرية (سموحة)</h3>
-                    <ul class="branch-info-list">
-                        <li>
-                            <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="info-text">طريق ألبرت الأول، أبراج سموحة ستارز، أمام نادي سموحة</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-clock"></i></span>
-                            <span class="info-text">يومياً من الساعة 9:00 صباحاً وحتى 11:30 مساءً</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-phone-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 3 4298765</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-mobile-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 12 9876 5432</span>
-                        </li>
-                    </ul>
-                    <a href="https://maps.google.com" target="_blank" class="btn btn-branch-map">
-                        <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
-                    </a>
-                </div>
-            </div>
-
-            <!-- Branch 4 Card -->
-            <div class="branch-card fade-in-scroll">
-                <div class="branch-image-placeholder secondary-place">
-                    <i class="fas fa-map-marked-alt branch-map-icon"></i>
-                    <div class="branch-tag">فرع الإسكندرية</div>
-                </div>
-                <div class="branch-details">
-                    <h3 class="branch-name">فرع الإسكندرية (سموحة)</h3>
-                    <ul class="branch-info-list">
-                        <li>
-                            <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="info-text">طريق ألبرت الأول، أبراج سموحة ستارز، أمام نادي سموحة</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-clock"></i></span>
-                            <span class="info-text">يومياً من الساعة 9:00 صباحاً وحتى 11:30 مساءً</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-phone-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 3 4298765</span>
-                        </li>
-                        <li>
-                            <span class="info-icon"><i class="fas fa-mobile-alt"></i></span>
-                            <span class="info-text" dir="ltr">+20 12 9876 5432</span>
-                        </li>
-                    </ul>
-                    <a href="https://maps.google.com" target="_blank" class="btn btn-branch-map">
+                    <a href="https://maps.google.com/maps?q=30.1227970123291%2C31.318387985229492&z=17&hl=en" target="_blank" class="btn btn-branch-map">
                         <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
                     </a>
                 </div>
@@ -595,7 +601,7 @@
                         <div class="method-icon"><i class="fas fa-phone-volume"></i></div>
                         <div class="method-content">
                             <h4>اتصل بنا مباشرة</h4>
-                            <p dir="ltr">+20 10 1234 5678</p>
+                            <p dir="ltr">01147070744</p>
                         </div>
                     </div>
                     <div class="method-item">
@@ -608,8 +614,8 @@
                     <div class="method-item">
                         <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="method-content">
-                            <h4>خدمة العملاء (واتساب)</h4>
-                            <p dir="ltr">+20 10 1234 5678</p>
+                            <h4>خدمة العملاء والشكاوى (واتساب)</h4>
+                            <p dir="ltr">01147070744</p>
                         </div>
                     </div>
                 </div>
@@ -647,8 +653,7 @@
 
             <div class="footer-widget">
                 <a href="#" class="logo footer-logo">
-                    <span class="logo-text">Brazilia</span>
-                    <span class="logo-sub">Coffee</span>
+                    <img src="assets/logo.jpg" alt="بن برازيليا" class="footer-brand-logo">
                 </a>
                 <p class="footer-widget-text">نحن شغوفون بتقديم أفضل أكواب القهوة وتوريد أجود حبوب البن المحمصة محلياً
                     وعالمياً لنجعل من القهوة تجربة استثنائية كل يوم.</p>
@@ -658,7 +663,7 @@
                     <a href="https://instagram.com" target="_blank" aria-label="إنستغرام"><i
                             class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com" target="_blank" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                    <a href="https://wa.me/201012345678" target="_blank" aria-label="واتساب"><i
+                    <a href="https://wa.me/201147070744" target="_blank" aria-label="واتساب"><i
                             class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
@@ -675,12 +680,20 @@
             </div>
 
             <div class="footer-widget">
-                <h3 class="widget-title">ساعات العمل</h3>
-                <ul class="widget-hours">
-                    <li><span>السبت - الأربعاء:</span> <span>8:00 ص - 12:00 م</span></li>
-                    <li><span>الخميس:</span> <span>8:00 ص - 1:00 ص</span></li>
-                    <li><span>الجمعة:</span> <span>1:00 م - 1:00 ص</span></li>
-                    <li><span>توصيل حبوب البن:</span> <span>متاح 24 ساعة عبر الموقع</span></li>
+                <h3 class="widget-title">فروعنا بعين شمس</h3>
+                <ul class="branch-info-list" style="margin-bottom:0;">
+                    <li style="gap:8px;">
+                        <span class="info-icon" style="font-size:0.9rem;"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="info-text" style="font-size:0.85rem;">٣٩ شارع عين شمس، ميدان النعام</span>
+                    </li>
+                    <li style="gap:8px;">
+                        <span class="info-icon" style="font-size:0.9rem;"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="info-text" style="font-size:0.85rem;">عين شمس، متحف المطرية</span>
+                    </li>
+                    <li style="gap:8px;">
+                        <span class="info-icon" style="font-size:0.9rem;"><i class="fas fa-phone-alt"></i></span>
+                        <span class="info-text" dir="ltr" style="font-size:0.85rem;">01147070744</span>
+                    </li>
                 </ul>
             </div>
 
@@ -703,6 +716,32 @@
             </div>
         </div>
     </footer>
+
+    <!-- Menu Lightbox Modal -->
+    <div class="menu-modal" id="menuModal" aria-hidden="true" role="dialog">
+        <div class="menu-modal-dialog">
+            <div class="menu-modal-header">
+                <div class="menu-modal-title">
+                    <i class="fas fa-book-open"></i>
+                    <span>قائمة أسعار ومنيو بن برازيليا الرسمية</span>
+                </div>
+                <button class="menu-modal-close" id="closeMenuModal" aria-label="إغلاق النافذة">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="menu-modal-body">
+                <img src="assets/menu.jpg" alt="منيو بن برازيليا الكامل" class="menu-modal-img">
+            </div>
+            <div class="menu-modal-footer">
+                <span style="font-size:0.9rem; color:var(--text-secondary);">
+                    <i class="fas fa-info-circle highlight"></i> متاح البيع بالأوزان: كيلو، ربع كيلو، ثمن كيلو
+                </span>
+                <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> اطلب من المنيو عبر واتساب
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Glowing Floating WhatsApp Widget -->
     <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%82%D9%87%D9%88%D8%A9%20%D8%A3%D9%88%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%81%D8%B1%D9%88%D8%B9%D9%83%D9%85%0A%0A"

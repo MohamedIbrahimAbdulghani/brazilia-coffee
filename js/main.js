@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. WhatsApp Configuration
-    const WHATSAPP_NUMBER = '201012345678'; // Target phone number (Egypt code format: 20xxxxxxxxxx)
+    const WHATSAPP_NUMBER = '201147070744'; // Brazilia Coffee official hotline / WhatsApp
 
     // 2. DOM Elements
     const header = document.getElementById('header');
@@ -184,7 +184,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 productCards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
-                    if (filterValue === 'all' || cardCategory === filterValue) {
+                    if (filterValue === 'all') {
+                        // In 'all', display all individual coffee products and hide the menu board card
+                        if (cardCategory === 'menu-board') {
+                            card.classList.add('hide');
+                        } else {
+                            card.classList.remove('hide');
+                        }
+                    } else if (cardCategory === filterValue) {
                         card.classList.remove('hide');
                     } else {
                         card.classList.add('hide');
@@ -242,4 +249,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // -----------------------------------------
+    // 11. Menu Lightbox Modal
+    // -----------------------------------------
+    const menuModal = document.getElementById('menuModal');
+    const openMenuModalWrap = document.getElementById('openMenuModal');
+    const btnViewMenuModal = document.getElementById('btnViewMenuModal');
+    const closeMenuModalBtn = document.getElementById('closeMenuModal');
+
+    const openModal = () => {
+        if (menuModal) {
+            menuModal.classList.add('active');
+            menuModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeModal = () => {
+        if (menuModal) {
+            menuModal.classList.remove('active');
+            menuModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (openMenuModalWrap) openMenuModalWrap.addEventListener('click', openModal);
+    if (btnViewMenuModal) btnViewMenuModal.addEventListener('click', openModal);
+    if (closeMenuModalBtn) closeMenuModalBtn.addEventListener('click', closeModal);
+
+    // Close modal on click outside dialog
+    if (menuModal) {
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuModal && menuModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 });
