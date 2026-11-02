@@ -182,10 +182,16 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.style.opacity = '0.3';
 
             setTimeout(() => {
+                if (filterValue === 'menu-board') {
+                    grid.classList.add('menu-boards-active');
+                } else {
+                    grid.classList.remove('menu-boards-active');
+                }
+
                 productCards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (filterValue === 'all') {
-                        // In 'all', display all individual coffee products and hide the menu board card
+                        // In 'all', display all individual coffee products and hide the menu board cards
                         if (cardCategory === 'menu-board') {
                             card.classList.add('hide');
                         } else {
@@ -251,46 +257,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -----------------------------------------
-    // 11. Menu Lightbox Modal
+    // 11. Menu Lightbox Modals (Beans & Drinks)
     // -----------------------------------------
-    const menuModal = document.getElementById('menuModal');
-    const openMenuModalWrap = document.getElementById('openMenuModal');
-    const btnViewMenuModal = document.getElementById('btnViewMenuModal');
-    const closeMenuModalBtn = document.getElementById('closeMenuModal');
+    const setupModal = (modalId, triggerIds, closeId) => {
+        const modal = document.getElementById(modalId);
+        const closeBtn = document.getElementById(closeId);
 
-    const openModal = () => {
-        if (menuModal) {
-            menuModal.classList.add('active');
-            menuModal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
+        const open = () => {
+            if (modal) {
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        const close = () => {
+            if (modal) {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+        };
+
+        triggerIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('click', open);
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', close);
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) close();
+            });
         }
-    };
 
-    const closeModal = () => {
-        if (menuModal) {
-            menuModal.classList.remove('active');
-            menuModal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-    };
-
-    if (openMenuModalWrap) openMenuModalWrap.addEventListener('click', openModal);
-    if (btnViewMenuModal) btnViewMenuModal.addEventListener('click', openModal);
-    if (closeMenuModalBtn) closeMenuModalBtn.addEventListener('click', closeModal);
-
-    // Close modal on click outside dialog
-    if (menuModal) {
-        menuModal.addEventListener('click', (e) => {
-            if (e.target === menuModal) {
-                closeModal();
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                close();
             }
         });
-    }
+    };
 
-    // Close modal on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && menuModal && menuModal.classList.contains('active')) {
-            closeModal();
-        }
-    });
+    setupModal('menuModal', ['openMenuModal', 'btnViewMenuModal'], 'closeMenuModal');
+    setupModal('drinksModal', ['openDrinksModal', 'btnViewDrinksModal'], 'closeDrinksModal');
 });

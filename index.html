@@ -32,7 +32,7 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="بن برازيليا" class="brand-logo-img">
+                <img src="assets/logo.png" alt="بن برازيليا" class="brand-logo-img">
             </a>
 
             <nav class="navbar" id="navbar">
@@ -69,16 +69,35 @@
         <div class="hero-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content fade-in-up">
-                <span class="hero-badge">مرحباً بكم في عالم المذاق الفاخر</span>
-                <h1 class="hero-title">بن برازيليا<br><span class="highlight">شغف القهوة المختصة</span></h1>
-                <p class="hero-subtitle">نختار أجود حبوب البن من قلب مزارع البرازيل، ونحمصها بشغف وإتقان لتصلك تجربة
-                    قهوة لا تُنسى في كل رشفة.</p>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <i class="fas fa-crown"></i>
+                    <span>مرحباً بكم في عالم المذاق الفاخر</span>
+                </div>
+                <h1 class="hero-title">
+                    بن برازيليا
+                    <span class="highlight hero-title-highlight">شغف القهوة المختصة</span>
+                </h1>
+                <p class="hero-subtitle">
+                    نختار أجود حبوب البن من قلب مزارع البرازيل، ونحمصها بشغف وإتقان لتصلك تجربة قهوة لا تُنسى في كل رشفة بنكهة غنية ورغوة تدوم.
+                </p>
+
+                <!-- Value Highlights Pills -->
+                <div class="hero-pills-list">
+                    <span class="hero-pill"><i class="fas fa-seedling"></i> بن برازيلي %100</span>
+                    <span class="hero-pill"><i class="fas fa-fire"></i> تحميص طازج يومياً</span>
+                    <span class="hero-pill"><i class="fas fa-truck-fast"></i> توصيل سريع</span>
+                </div>
+
                 <div class="hero-actions-group">
-                    <a href="#products" class="btn btn-primary">تصفح المنتجات <i
-                            class="fas fa-arrow-left icon-arrow"></i></a>
+                    <a href="#products" class="btn btn-primary btn-hero-order">
+                        <span>تصفح المنتجات والأسعار</span>
+                        <i class="fas fa-arrow-left icon-arrow"></i>
+                    </a>
                     <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%83%D9%85"
-                        target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                        target="_blank" class="btn btn-secondary btn-hero-wa">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>تواصل عبر الواتساب</span>
                     </a>
                 </div>
             </div>
@@ -265,28 +284,67 @@
         <!-- Products Grid -->
         <div class="container grid-3 margin-top-lg" id="productsGrid">
 
-            <!-- Menu Board Card (Shown exclusively when clicking 'لوحة المنيو بالكامل') -->
+            <!-- Menu Board Panels (Two Complete Panels Side by Side) -->
+            <!-- Panel 1: Food / Beans Menu Panel -->
             <div class="product-card menu-board-card fade-in-scroll hide" data-category="menu-board">
                 <div class="menu-board-inner">
                     <div class="menu-board-img-wrap" id="openMenuModal">
                         <img src="assets/menu.jpg" alt="منيو وقائمة أسعار بن برازيليا" class="menu-board-preview-img">
                         <div class="menu-overlay-hint">
                             <i class="fas fa-search-plus"></i>
-                            <span>اضغط لتكبير المنيو وقراءة كافة الأسعار</span>
+                            <span>اضغط لتكبير وقراءة أسعار البن</span>
                         </div>
                     </div>
                     <div class="menu-board-info">
-                        <span class="product-tag">المنيو والأسعار الرسمية</span>
-                        <h3 class="product-title">منيو بن برازيليا المتكامل لجميع الأصناف والأوزان</h3>
+                        <span class="product-tag">منيو خامات وحبوب البن</span>
+                        <h3 class="product-title">قائمة أسعار البن والأوزان الرسمية</h3>
                         <p class="product-description">
-                            تصفح قائمتنا الكاملة بأسعار الكيلو والربع والثمن لجميع الخلطات: بن برازيليا ملكي، بن برزيلي، بن شرقي (فاتح/وسط/غامق)، بن العميد، استشيل، حبشي، كولومبي، يمني، إسبريسو، وفرنساوي، مع حبهان وجوز الطيب الطازج.
+                            تصفح قائمتنا الكاملة بأسعار الكيلو والربع والثمن لجميع الخلطات: بن برازيليا ملكي، بن شرقي (فاتح/وسط/غامق)، بن العميد، استشيل، حبشي، كولومبي، يمني، وإسبريسو وفرنساوي مع الحبهان وجوز الطيب.
                         </p>
+                        <div class="menu-board-pills">
+                            <span class="menu-board-pill"><i class="fas fa-scale-balanced"></i> بيع بالأوزان: كيلو، ربع، ثمن</span>
+                            <span class="menu-board-pill"><i class="fas fa-fire-burner"></i> طحن فوري طازج</span>
+                        </div>
                         <div class="menu-board-actions">
-                            <button class="btn btn-primary" id="btnViewMenuModal">
-                                <i class="fas fa-eye"></i> تكبير المنيو وقراءة الأسعار
+                            <button type="button" class="btn btn-primary" id="btnViewMenuModal">
+                                <i class="fas fa-eye"></i> تكبير منيو البن
                             </button>
-                            <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88" target="_blank" class="btn btn-secondary">
-                                <i class="fab fa-whatsapp"></i> طلب مباشر عبر واتساب
+                            <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%A8%D9%86%20%D9%85%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88"
+                                target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-whatsapp"></i> طلب حبوب البن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Drinks Menu Panel -->
+            <div class="product-card menu-board-card fade-in-scroll hide" data-category="menu-board">
+                <div class="menu-board-inner">
+                    <div class="menu-board-img-wrap" id="openDrinksModal">
+                        <img src="assets/menu-drinks.jpg" alt="منيو المشروبات والقهوة الجاهزة بن برازيليا" class="menu-board-preview-img">
+                        <div class="menu-overlay-hint">
+                            <i class="fas fa-search-plus"></i>
+                            <span>اضغط لتكبير وقراءة منيو المشروبات</span>
+                        </div>
+                    </div>
+                    <div class="menu-board-info">
+                        <span class="product-tag tag-drinks">منيو الكافيه والمشروبات</span>
+                        <h3 class="product-title">منيو المشروبات الساخنة والباردة</h3>
+                        <p class="product-description">
+                            تشكيلة المشروبات المحضرة طازجة من باريستا برازيليا: إسبريسو سنجل ودبل، كورتادو، فلات وايت، كابتشينو، لاتيه، موكا، قهوة تركية كلاسيك وبالهيل، ومشروبات مثلجة منعشة وفرابيه.
+                        </p>
+                        <div class="menu-board-pills">
+                            <span class="menu-board-pill"><i class="fas fa-mug-hot"></i> مشروبات ساخنة ومثلجة</span>
+                            <span class="menu-board-pill"><i class="fas fa-bolt"></i> تحضير فوري في الفرع</span>
+                        </div>
+                        <div class="menu-board-actions">
+                            <button type="button" class="btn btn-primary" id="btnViewDrinksModal">
+                                <i class="fas fa-mug-hot"></i> تكبير منيو المشاريب
+                            </button>
+                            <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%A8"
+                                target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-whatsapp"></i> طلب مشروبات جاهزة
                             </a>
                         </div>
                     </div>
@@ -309,9 +367,12 @@
                         <span>(5.0)</span>
                     </div>
                     <h3 class="product-title">بن برازيليا ملكي (سادة)</h3>
-                    <p class="product-description">أجود خلطة بن برازيلي صافي سادة بتوليفة ملكية خاصة، تحميص احترافي ونكهة شوكولاتية غنية وقوام متوازن.</p>
+                    <p class="product-description">أجود خلطة بن برازيلي صافي سادة بتوليفة ملكية خاصة، تحميص احترافي
+                        ونكهة شوكولاتية غنية وقوام متوازن.</p>
                     <div class="product-meta">
-                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">160 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن برازيليا ملكي (سادة) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -335,9 +396,12 @@
                         <span>(5.0)</span>
                     </div>
                     <h3 class="product-title">بن برازيليا ملكي (محوج)</h3>
-                    <p class="product-description">توليفة برازيليا الملكية الفاخرة مع حبهان أخضر طازج ومستكة، لضبط المزاج وتجربة قهوة شرقية أصيلة لا تُقاوم.</p>
+                    <p class="product-description">توليفة برازيليا الملكية الفاخرة مع حبهان أخضر طازج ومستكة، لضبط
+                        المزاج وتجربة قهوة شرقية أصيلة لا تُقاوم.</p>
                     <div class="product-meta">
-                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">175 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن برازيليا ملكي (محوج) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -361,9 +425,12 @@
                         <span>(4.9)</span>
                     </div>
                     <h3 class="product-title">بن برزيلي أصلي (سادة)</h3>
-                    <p class="product-description">حبوب بن برازيلي صافية 100% بنكهات الجوز والكراميل الطبيعية، مثالية للركوة والإسبريسو ومحبي القهوة الصافية.</p>
+                    <p class="product-description">حبوب بن برازيلي صافية 100% بنكهات الجوز والكراميل الطبيعية، مثالية
+                        للركوة والإسبريسو ومحبي القهوة الصافية.</p>
                     <div class="product-meta">
-                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">160 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن برزيلي أصلي (سادة) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -387,9 +454,12 @@
                         <span>(4.8)</span>
                     </div>
                     <h3 class="product-title">بن برزيلي (محوج مخصوص)</h3>
-                    <p class="product-description">بن برازيلي نخب أول مطعّم بنسبة موزونة من الحبهان العطري الممتاز للحصول على وش متماسك ورائحة تفوح في المكان.</p>
+                    <p class="product-description">بن برازيلي نخب أول مطعّم بنسبة موزونة من الحبهان العطري الممتاز
+                        للحصول على وش متماسك ورائحة تفوح في المكان.</p>
                     <div class="product-meta">
-                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">175 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن برزيلي (محوج مخصوص) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -413,9 +483,12 @@
                         <span>(4.9)</span>
                     </div>
                     <h3 class="product-title">بن شرقي سادة (فاتح / وسط / غامق)</h3>
-                    <p class="product-description">توليفة شرقية عريقة متاحة حسب رغبتك بالتحميص الفاتح أو الوسط أو الغامق بطعم قوي وغني بالإيحاءات التراثية.</p>
+                    <p class="product-description">توليفة شرقية عريقة متاحة حسب رغبتك بالتحميص الفاتح أو الوسط أو الغامق
+                        بطعم قوي وغني بالإيحاءات التراثية.</p>
                     <div class="product-meta">
-                        <span class="product-price">140 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">140 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن شرقي سادة (فاتح/وسط/غامق) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -439,9 +512,12 @@
                         <span>(4.9)</span>
                     </div>
                     <h3 class="product-title">بن شرقي محوج (فاتح / وسط / غامق)</h3>
-                    <p class="product-description">الخلطة الشرقية المحبوبة مع تحويجة خاصة من الحبهان الفاخر، تناسب عشاق الفنجان اليومي المضبوط بدرجة التحميص المختارة.</p>
+                    <p class="product-description">الخلطة الشرقية المحبوبة مع تحويجة خاصة من الحبهان الفاخر، تناسب عشاق
+                        الفنجان اليومي المضبوط بدرجة التحميص المختارة.</p>
                     <div class="product-meta">
-                        <span class="product-price">160 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">160 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن شرقي محوج (فاتح/وسط/غامق) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -465,9 +541,12 @@
                         <span>(5.0)</span>
                     </div>
                     <h3 class="product-title">بن كولومبي سوبريمو (سادة)</h3>
-                    <p class="product-description">محصول كولومبي نقي بحموضة فاكهية رقيقة مع نوتات العسل والحمضيات الخفيفة، لعشاق القهوة المختصة الراقية.</p>
+                    <p class="product-description">محصول كولومبي نقي بحموضة فاكهية رقيقة مع نوتات العسل والحمضيات
+                        الخفيفة، لعشاق القهوة المختصة الراقية.</p>
                     <div class="product-meta">
-                        <span class="product-price">175 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">175 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن كولومبي سوبريمو (سادة) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -491,9 +570,12 @@
                         <span>(5.0)</span>
                     </div>
                     <h3 class="product-title">بن يمني إسماعيلي أصيل (محوج)</h3>
-                    <p class="product-description">الذهب الأسود من جبال اليمن الشاهقة، قوام ثقيل وطعم بري معقد مع حبهان وجوز الطيب ليمنحك فنجاناً لا مثيل له.</p>
+                    <p class="product-description">الذهب الأسود من جبال اليمن الشاهقة، قوام ثقيل وطعم بري معقد مع حبهان
+                        وجوز الطيب ليمنحك فنجاناً لا مثيل له.</p>
                     <div class="product-meta">
-                        <span class="product-price">250 EGP <small style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع ك</small></span>
+                        <span class="product-price">250 EGP <small
+                                style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">/ ربع
+                                ك</small></span>
                         <button class="btn btn-card-order" data-product="بن يمني إسماعيلي (محوج) - ربع كيلو">
                             <i class="fab fa-whatsapp"></i> اطلب واتساب
                         </button>
@@ -542,7 +624,8 @@
                             <span class="info-text">طحن طازج لكافة الخلطات وإمكانية إعداد قهوتك فورياً</span>
                         </li>
                     </ul>
-                    <a href="https://maps.google.com/maps?q=30.1227970123291%2C31.318387985229492&z=17&hl=en" target="_blank" class="btn btn-branch-map">
+                    <a href="https://maps.google.com/maps?q=30.1227970123291%2C31.318387985229492&z=17&hl=en"
+                        target="_blank" class="btn btn-branch-map">
                         <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
                     </a>
                 </div>
@@ -574,7 +657,8 @@
                             <span class="info-text">جلسات خارجية هادئة وتشكيلة واسعة من البن المحوج والسادة</span>
                         </li>
                     </ul>
-                    <a href="https://maps.google.com/maps?q=30.1227970123291%2C31.318387985229492&z=17&hl=en" target="_blank" class="btn btn-branch-map">
+                    <a href="https://maps.google.com/maps?q=30.120743,31.322384&z=17&hl=ar"
+                        target="_blank" class="btn btn-branch-map">
                         <i class="fas fa-location-arrow"></i> اتجاهات جوجل ماب
                     </a>
                 </div>
@@ -615,7 +699,7 @@
                         <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="method-content">
                             <h4>خدمة العملاء والشكاوى (واتساب)</h4>
-                            <p dir="ltr">01147070744</p>
+                            <p>01147070744</p>
                         </div>
                     </div>
                 </div>
@@ -653,7 +737,7 @@
 
             <div class="footer-widget">
                 <a href="#" class="logo footer-logo">
-                    <img src="assets/logo.jpg" alt="بن برازيليا" class="footer-brand-logo">
+                    <img src="assets/logo.png" alt="بن برازيليا" class="footer-brand-logo">
                 </a>
                 <p class="footer-widget-text">نحن شغوفون بتقديم أفضل أكواب القهوة وتوريد أجود حبوب البن المحمصة محلياً
                     وعالمياً لنجعل من القهوة تجربة استثنائية كل يوم.</p>
@@ -717,13 +801,13 @@
         </div>
     </footer>
 
-    <!-- Menu Lightbox Modal -->
+    <!-- Menu Lightbox Modal (Beans Menu) -->
     <div class="menu-modal" id="menuModal" aria-hidden="true" role="dialog">
         <div class="menu-modal-dialog">
             <div class="menu-modal-header">
                 <div class="menu-modal-title">
                     <i class="fas fa-book-open"></i>
-                    <span>قائمة أسعار ومنيو بن برازيليا الرسمية</span>
+                    <span>قائمة أسعار أصناف بن برازيليا الكاملة</span>
                 </div>
                 <button class="menu-modal-close" id="closeMenuModal" aria-label="إغلاق النافذة">
                     <i class="fas fa-times"></i>
@@ -736,8 +820,36 @@
                 <span style="font-size:0.9rem; color:var(--text-secondary);">
                     <i class="fas fa-info-circle highlight"></i> متاح البيع بالأوزان: كيلو، ربع كيلو، ثمن كيلو
                 </span>
-                <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88" target="_blank" class="btn btn-primary">
+                <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%88"
+                    target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> اطلب من المنيو عبر واتساب
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drinks Menu Lightbox Modal -->
+    <div class="menu-modal" id="drinksModal" aria-hidden="true" role="dialog">
+        <div class="menu-modal-dialog">
+            <div class="menu-modal-header">
+                <div class="menu-modal-title">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>منيو المشروبات والقهوة الجاهزة - بن برازيليا</span>
+                </div>
+                <button class="menu-modal-close" id="closeDrinksModal" aria-label="إغلاق النافذة">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="menu-modal-body">
+                <img src="assets/menu-drinks.jpg" alt="منيو مشروبات بن برازيليا" class="menu-modal-img">
+            </div>
+            <div class="menu-modal-footer">
+                <span style="font-size:0.9rem; color:var(--text-secondary);">
+                    <i class="fas fa-info-circle highlight"></i> مشروبات باريستا طازجة تُعد فورياً بحبوب بن برازيليا المختصة
+                </span>
+                <a href="https://wa.me/201147070744?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%A8"
+                    target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> اطلب مشروبك الآن عبر واتساب
                 </a>
             </div>
         </div>
