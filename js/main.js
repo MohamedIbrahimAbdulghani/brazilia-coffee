@@ -188,10 +188,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     grid.classList.remove('menu-boards-active');
                 }
 
-                productCards.forEach(card => {
+                const filterItems = document.querySelectorAll('.product-card, .category-divider-card');
+                filterItems.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (filterValue === 'all') {
-                        // In 'all', display all individual coffee products and hide the menu board cards
+                        // In 'all', display all coffee products & category headers, hide menu board panels
                         if (cardCategory === 'menu-board') {
                             card.classList.add('hide');
                         } else {
@@ -261,22 +262,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // -----------------------------------------
     const setupModal = (modalId, triggerIds, closeId) => {
         const modal = document.getElementById(modalId);
+        if (!modal) return;
         const closeBtn = document.getElementById(closeId);
+        const dialog = modal.querySelector('.menu-modal-dialog');
 
         const open = () => {
-            if (modal) {
-                modal.classList.add('active');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
         };
 
         const close = () => {
-            if (modal) {
-                modal.classList.remove('active');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-            }
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
         };
 
         triggerIds.forEach(id => {
@@ -286,14 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (closeBtn) closeBtn.addEventListener('click', close);
 
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) close();
+        // Clicking on the dialog or image must NOT close the modal
+        if (dialog) {
+            dialog.addEventListener('click', (e) => {
+                e.stopPropagation();
             });
         }
 
+        // Clicking the backdrop closes the modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                close();
+            }
+        });
+
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
                 close();
             }
         });
